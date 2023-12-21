@@ -8,14 +8,6 @@ import zipfile
 from readPages import *
 import shutil
 
-import pkg_resources
-
-installed_packages = [(d.project_name, d.version) for d in pkg_resources.working_set]
-installed_packages.sort()
-
-for package, version in installed_packages:
-    print(f"{package} - {version}")
-
 #选择文件
 def openfile():
     sfname = filedialog.askopenfilename(title='选择文件', filetypes=[('All Files', '*')])
